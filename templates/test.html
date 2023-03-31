@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Switch CSS Styles with Click</title>
+  <style>
+    .style1 {
+
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #fff;
+        background-color: #36393f;
+
+
+    }
+    .style2 {
+
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #fff;
+        background-color: #1456db;
+
+
+    }
+  </style>
+</head>
+<body>
+  <button id="style1-btn">Style 1</button>
+  <button id="style2-btn">Style 2</button>
+
+  <p id="text" class="style1">This is some text that will change styles.</p>
+
+  <script>
+    const style1Btn = document.querySelector('#style1-btn');
+    const style2Btn = document.querySelector('#style2-btn');
+    const text = document.querySelector('#text');
+
+    style1Btn.addEventListener('click', () => {
+      text.classList.remove('style2');
+      text.classList.add('style1');
+    });
+
+    style2Btn.addEventListener('click', () => {
+      text.classList.remove('style1');
+      text.classList.add('style2');
+    });
+  </script>
+</body>
+</html>
